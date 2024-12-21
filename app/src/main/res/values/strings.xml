@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">WarehouseApp</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="signup">Signup</string>
+    <string name="re_enter_password">Re-enter Password</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="role">Role</string>
+    <string name="customer">Customer</string>
+    <string name="dismiss">DISMISS</string>
+    <string name="info_admin_chosen">Admin approval is required to enable Login</string>
+    <string name="welcome_back">Welcome back!</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="logout">Logout</string>
+    <string name="bottom_home">Home</string>
+    <string name="bottom_history">History</string>
+    <string name="bottom_profile">Profile</string>
+    <string name="bottom_reports">Reports</string>
+
+    <string-array name="roles">
+        <item>Customer</item>
+        <item>Admin</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bottom_inventory">Inventory</string>
+    <string name="edit">EDIT</string>
+    <string name="delete">DELETE</string>
+    <string name="search_by">Search By:</string>
+    <string name="category">Category</string>
+    <string name="search">Search</string>
+    <string name="description">Description</string>
+    <string name="order_confirmed">Order Confirmed</string>
+    <string name="add_new_product">Add New Product</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="price">Price</string>
+    <string name="sale_price">Sale Price</string>
+    <string name="original_price">Original Price</string>
+    <string name="save">Save</string>
+    <string name="quantity">Quantity</string>
+    <string name="clear">Clear</string>
+    <string name="category_name">Category Name</string>
+    <string name="activity_log">Activity Log</string>
+    <string name="customers">View Customers</string>
+    <string name="access_requests">Access Requests</string>
+    <string name="profile">Update Profile</string>
+    <string name="approve">Approve</string>
+    <string name="first_name">First Name</string>
+    <string name="address">Address</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone_no">Phone No</string>
+</resources>

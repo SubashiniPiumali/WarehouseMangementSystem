@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_customer_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customer.CustomerHomeFragment">
+
+    <!-- App Bar with Back Button and Title -->
+
+    <!-- Search Bar -->
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:paddingStart="16dp"
+            android:text="Home"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/cart_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end|center_vertical"
+            android:contentDescription="Cart"
+            android:padding="8dp"
+            android:src="@drawable/baseline_shopping_cart_24"
+            app:tint="@android:color/white" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:id="@+id/searchBarContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/searchbar"
+        android:orientation="horizontal"
+        android:padding="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <EditText
+            android:id="@+id/searchInput"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Search products"
+            android:padding="10dp"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_search"
+            app:tint="@color/gray" />
+    </LinearLayout>
+
+    <!-- Sort and Filter Options -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupSortFilter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/searchBarContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:singleSelection="true"
+
+        android:orientation="horizontal">
+
+        <!-- Sort by Price Chip -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSortPrice"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort by Price"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            app:chipStrokeWidth="1dp"
+            app:chipIcon="@drawable/ic_arrow_up" />
+
+        <!-- Category Buttons -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBoots"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            app:chipStrokeWidth="1dp"
+            android:text="Boots" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCasual"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            app:chipStrokeWidth="1dp"
+            android:text="Casual" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSports"
+            style="@style/Widget.MaterialComponents.Chip.Action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            app:chipBackgroundColor="@color/white"
+            app:chipStrokeColor="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            app:chipStrokeWidth="1dp"
+            android:text="Sports" />
+    </com.google.android.material.chip.ChipGroup>
+
+
+
+
+    <!-- RecyclerView for Products -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProducts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chipGroupSortFilter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
